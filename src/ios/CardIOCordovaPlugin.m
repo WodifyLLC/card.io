@@ -47,8 +47,20 @@
     if(collectExpiry) {
         paymentViewController.collectExpiry = [collectExpiry boolValue];
     }
-
+    
+    /**
+     * Elli Rego added lines below to fix typo.
+     *
+     * Updated 1/18/16.
+     */
+     
+    //NSNumber *disableManualEntryButtons = [options objectForKey:@"supressManual"];
     NSNumber *disableManualEntryButtons = [options objectForKey:@"suppressManual"];
+    
+    /** 
+    * End of Elli Rego's additions.
+    */
+    
     if(disableManualEntryButtons) {
         paymentViewController.disableManualEntryButtons = [disableManualEntryButtons boolValue];
     }
