@@ -92,8 +92,23 @@ public class CardIO extends CordovaPlugin {
             callbackContext.sendPluginResult(cardData);
             cardNumber = null;
         } else {
-            PluginResult cardData = new PluginResult(
-                                                     PluginResult.Status.NO_RESULT);
+            
+            /**
+             * Elli Rego added lines below to notify when back button is pressed.
+             *
+             * Updated 1/19/16.
+             */
+     
+            // This does not call error callback
+            // PluginResult cardData = new PluginResult(
+            //                                         PluginResult.Status.NO_RESULT);
+            PluginResult cardData = new PluginResult(PluginResult.Status.ERROR);
+            
+            /** 
+            * End of Elli Rego's additions.
+            */
+            
+            
             cardData.setKeepCallback(false);
             callbackContext.sendPluginResult(cardData);
         }
