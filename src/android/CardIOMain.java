@@ -36,6 +36,17 @@ public class CardIOMain extends Activity {
         scanIntent.putExtra(CardIOActivity.EXTRA_SUPPRESS_MANUAL_ENTRY, CardIO.suppressManual);
         scanIntent.putExtra(CardIOActivity.EXTRA_HIDE_CARDIO_LOGO, CardIO.hideLogo);
         
+        /**
+         * Elli Rego added lines below to remove PayPal logo.
+         *
+         * Updated 1/19/16.
+         */
+     
+        scanIntent.putExtra(CardIOActivity.EXTRA_USE_PAYPAL_ACTIONBAR_ICON, false);
+        /** 
+        * End of Elli Rego's additions.
+        */
+        
         // MY_SCAN_REQUEST_CODE is arbitrary and is only used within this activity.
         startActivityForResult(scanIntent, MY_SCAN_REQUEST_CODE);
     }
